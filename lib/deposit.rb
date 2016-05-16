@@ -5,4 +5,7 @@ class Deposit
 
   include Transaction
 
+  def value
+    @amount
+  end
 end

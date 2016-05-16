@@ -4,7 +4,7 @@ class Withdrawal
 
   include Transaction
 
-  def amount
+  def value
     -@amount
   end
 
