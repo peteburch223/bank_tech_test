@@ -8,6 +8,10 @@ module Transaction
     @start_balance = args[:balance]
   end
 
+  def value
+    @amount
+  end
+
   def balance
     value + @start_balance
   end

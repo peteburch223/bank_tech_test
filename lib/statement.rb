@@ -12,14 +12,11 @@ class Statement
   end
 
   def row_text (transaction)
-    credit = transaction.value > 0
-    debit = transaction.value < 0
-
     printf(transaction.date.strftime("%d/%m/%Y"))
     printf(" || ")
-    printf("%#.2f ", transaction.value ) if credit
+    printf("%#.2f ", transaction.value ) if transaction.value > 0
     printf("|| ")
-    printf("%#.2f ", -1 * transaction.value ) if debit
+    printf("%#.2f ", -1 * transaction.value ) if transaction.value < 0
     printf("|| ")
     printf("%#.2f", transaction.balance )
     puts
