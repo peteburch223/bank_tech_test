@@ -16,7 +16,7 @@ describe Withdrawal do
     end
 
     it('stores the withdrawal amount') do
-      expect(withdrawal.amount).to eq amount
+      expect(withdrawal.amount).to eq -amount
     end
   end
 end
